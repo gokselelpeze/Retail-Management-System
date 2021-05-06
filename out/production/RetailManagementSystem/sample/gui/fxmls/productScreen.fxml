@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="640.0" prefWidth="1080.0"
+            stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/8.0.171"
+            fx:controller="sample.gui.controllers.ProductScreenController">
+    <children>
+        <JFXTabPane prefHeight="669.0" prefWidth="1080.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab text="ADD NEW PRODUCT">
+                    <content>
+                        <AnchorPane prefHeight="640.0" prefWidth="1080.0" style="-fx-background-color: #FFf;"
+                                    stylesheets="@../../style/style.css">
+                            <children>
+                                <ComboBox fx:id="comboCategory" layoutX="67.0" layoutY="60.0" onAction="#categoryChoice"
+                                          prefWidth="150.0" promptText="Category" AnchorPane.leftAnchor="60.0"
+                                          AnchorPane.topAnchor="60.0"/>
+                                <ComboBox fx:id="comboProduct" layoutX="67.0" layoutY="102.0" onAction="#productChoice"
+                                          prefWidth="150.0" promptText="Product" visible="false"
+                                          AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="110.0"/>
+                                <AnchorPane fx:id="pnlProduct" visible="false" AnchorPane.bottomAnchor="100.0"
+                                            AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="50.0"
+                                            AnchorPane.topAnchor="200.0">
+                                    <children>
+                                        <HBox prefHeight="420.0" prefWidth="530.0" spacing="20.0"
+                                              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <VBox spacing="12.0">
+                                                    <children>
+                                                        <Label fx:id="lbl1" text="Brand:"/>
+                                                        <Label fx:id="lbl2" text="Name:"/>
+                                                        <Label fx:id="lbl3" text="Price:"/>
+                                                        <Label fx:id="lbl4" text="Manufacturer ID:"/>
+                                                        <Label fx:id="lbl5" text="Color:"/>
+                                                        <Label fx:id="lbl6" text="Gender:"/>
+                                                        <Label fx:id="lbl7" text="SizeWidth:"/>
+                                                        <Label fx:id="lbl8" text="SizeLength:"/>
+                                                    </children>
+                                                </VBox>
+                                                <VBox spacing="10.0">
+                                                    <children>
+                                                        <TextField fx:id="txt1" prefWidth="350.0"/>
+                                                        <TextField fx:id="txt2" prefWidth="350.0"/>
+                                                        <TextField fx:id="txt3" prefWidth="350.0"/>
+                                                        <TextField fx:id="txt4" prefWidth="350.0"/>
+                                                        <TextField fx:id="txt5" prefWidth="350.0"/>
+                                                        <TextField fx:id="txt6" prefWidth="350.0"/>
+                                                        <TextField fx:id="txt7" prefWidth="350.0"/>
+                                                        <TextField fx:id="txt8" prefWidth="350.0"/>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                                <Button fx:id="btnAddProduct" layoutX="96.0" layoutY="565.0" mnemonicParsing="false"
+                                        onAction="#addProduct" text="ADD PRODUCT" AnchorPane.bottomAnchor="50.0"
+                                        AnchorPane.leftAnchor="60.0"/>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="ORDER PRODUCT">
+                    <content>
+                        <AnchorPane style="-fx-background-color: #fff;">
+                            <children>
+                                <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="400.0"
+                                            AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="400.0"
+                                            AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+                                    <content>
+                                        <TableView fx:id="tableBasket" prefHeight="650.0" prefWidth="720.0">
+                                            <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                                            </columnResizePolicy>
+                                        </TableView>
+                                    </content>
+                                </ScrollPane>
+                                <Button fx:id="btnRemove" layoutX="400.0" layoutY="524.0" onAction="#removeItem"
+                                        prefWidth="300.0" text="REMOVE" AnchorPane.bottomAnchor="55.0"
+                                        AnchorPane.leftAnchor="410.0"/>
+                                <Button layoutX="510.0" layoutY="524.0" onAction="#cancelOrder" prefWidth="280.0"
+                                        text="CANCEL" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="750.0"/>
+                                <Label alignment="CENTER_RIGHT" layoutX="616.0" layoutY="524.0" text="TOTAL AMOUNT:"
+                                       AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="750.0">
+                                    <font>
+                                        <Font size="15.0"/>
+                                    </font>
+                                </Label>
+                                <Label fx:id="txtAmount" layoutX="797.0" layoutY="524.0" text="#AMOUNT"
+                                       AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="920.0">
+                                    <font>
+                                        <Font size="15.0"/>
+                                    </font>
+                                </Label>
+                                <Button layoutX="660.0" layoutY="580.0" mnemonicParsing="false" onAction="#order"
+                                        prefWidth="300.0" text="ORDER" AnchorPane.bottomAnchor="10.0"
+                                        AnchorPane.leftAnchor="410.0"/>
+                                <TextField fx:id="txtSearchItem" prefHeight="30.0" prefWidth="300.0"
+                                           promptText="ID or Name" AnchorPane.leftAnchor="50.0"
+                                           AnchorPane.topAnchor="50.0"/>
+                                <ListView fx:id="listViewItems" prefHeight="200.0" prefWidth="300.0"
+                                          AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="50.0"
+                                          AnchorPane.topAnchor="100.0"/>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="TRANSFER PRODUCT">
+                    <content>
+                        <AnchorPane prefHeight="640.0" prefWidth="1080.0" style="-fx-background-color: #FFf;"
+                                    stylesheets="@../../style/style.css"/>
+
+                    </content>
+                </Tab>
+            </tabs>
+        </JFXTabPane>
+    </children>
+</AnchorPane>

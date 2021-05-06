@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171"
+            fx:controller="sample.gui.controllers.LoginScreenController">
+    <children>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                    prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #0D0D0D;"
+                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                    AnchorPane.topAnchor="68.0">
+            <children>
+
+                <AnchorPane fx:id="pnlLogin" layoutX="566.0" layoutY="173.0" prefHeight="600.0" prefWidth="450.0"
+                            style="-fx-background-color: #FFF; -fx-background-radius: 30 30;"
+                            AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+                    <children>
+                        <JFXTextField fx:id="txtUsername" focusColor="#262626" layoutX="50.0" layoutY="176.0"
+                                      promptText="username" unFocusColor="BLACK" AnchorPane.leftAnchor="50.0"
+                                      AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="150.0">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="txtPassword" focusColor="#262626" layoutX="174.0" layoutY="356.0"
+                                          promptText="password" unFocusColor="BLACK" AnchorPane.leftAnchor="50.0"
+                                          AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="250.0">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </JFXPasswordField>
+                        <Label alignment="CENTER" layoutX="211.0" layoutY="72.0" text="Sign In"
+                               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                            <font>
+                                <Font size="40.0"/>
+                            </font>
+                        </Label>
+                        <JFXButton fx:id="btnSignIn" layoutX="182.0" layoutY="404.0" onAction="#login"
+                                   style="-fx-background-color: #262626; -fx-background-radius: 30 30;" text="SIGN IN"
+                                   textFill="WHITE" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0"
+                                   AnchorPane.rightAnchor="100.0">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </JFXButton>
+                        <Hyperlink alignment="CENTER" text="Forgot Password?" AnchorPane.bottomAnchor="50.0"
+                                   AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="160.0"/>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="200.0"
+                    style="-fx-background-color: #262626;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                    AnchorPane.topAnchor="0.0">
+            <children>
+                <JFXButton fx:id="btnCloseImg" onAction="#handleButtonAction" text="" AnchorPane.rightAnchor="10.0"
+                           AnchorPane.topAnchor="15.0">
+                    <graphic>
+                        <FontAwesomeIconView fill="#901e1e" glyphName="WINDOW_CLOSE" size="30">
+                            <effect>
+                                <DropShadow color="#111b29"/>
+                            </effect>
+                        </FontAwesomeIconView>
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="btnMinimizeImg" onAction="#handleButtonAction" text="" AnchorPane.rightAnchor="120.0"
+                           AnchorPane.topAnchor="15.0">
+                    <graphic>
+                        <FontAwesomeIconView fill="#901e1e" glyphName="WINDOW_MINIMIZE" size="30">
+                            <effect>
+                                <DropShadow color="#111b29"/>
+                            </effect>
+                        </FontAwesomeIconView>
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="btnRestoreImg" onAction="#handleButtonAction" text="" AnchorPane.rightAnchor="60.0"
+                           AnchorPane.topAnchor="15.0">
+                    <graphic>
+                        <FontAwesomeIconView fill="#901e1e" glyphName="WINDOW_RESTORE" size="30">
+                            <effect>
+                                <DropShadow color="#111b29"/>
+                            </effect>
+                        </FontAwesomeIconView>
+                    </graphic>
+                </JFXButton>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

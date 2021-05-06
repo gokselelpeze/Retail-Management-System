@@ -1,0 +1,35 @@
+Tshirt,Defacto,Judge Collar Shirt,100,0,Blue,Male,S,
+Tshirt,Lacoste,Big Blue Alligator,110,0,Blue,Female,S
+Tshirt,Island,H20 Cat,110,0,Green,Female,M
+Tshirt,Gabba,Penguin P5,80,0,White,Male,XL
+Tshirt,Oliver,Eyes of Owl,120,0,Gray,Male,XS
+Footwear,Nike,Air max A300,210,0,White,Male,42
+Footwear,Adidas,Superstar 2020,400,0,Green,Female,38
+Footwear,Puma,Faster 19,320,0,Black,Male,43
+Footwear,New Balance,N95 Red,210,0,Red,Female,39
+Footwear,Reebok,Revolution R20,180,0,Black,Male,44
+Pants,Koton,Black Pants K200,110,0,Black,Female,28,32
+Pants,JacknJones,Energy S200,130,0,Black,Male,30,32
+Pants,LTB,Wave 110,380,0,Blue,Male,31,33
+Pants,Texas Jeans,Flatter F200,90,0,Gray,Male,30,32
+Pants,Oscar,Pants T2020,250,0,Black,Female,28,30
+Computer,Lenovo,Y520,5300,1,15.4,1368*768,16GB,1TB
+Computer,HP,DESK 20,5600,1,15.4,1920*1080,16GB,500GB
+Computer,Lenovo,Y730,10500,1,17.1,1920*1080,32GB,2TB
+Computer,Asus,Complicator A870,3300,1,13.1,1024*768,4GB,128GB
+Computer,Casper,Excalibur E800,6000,1,15.4,1920*1080,16GB,1TB
+Phone,Apple,Iphone 6,2600,1,5,1368*768,16GB,1GB
+Phone,Samsung,Galaxy S7,2300,1,5.2,1920*1080,32GB,2GB
+Phone,Huawei,Yie Y20,1800,1,4,1024*768,16GB,1GB
+Phone,Oppo,P20 Honor,3000,1,6,1920*1080,64GB,6GB
+Phone,Asus,A20 2020,4000,1,5.7,1920*1080,64GB,4GB
+Television,Vestel,Eko K300,3000,1,43,1920*1080,true
+Television,Beko,B20 2015,1800,1,43,1368*768,false
+Television,Samsung,Kinetic P200,4000,1,49,1920*1080,true
+Television,Sony,Ocean N85,6000,1,55,2440*1200,true
+Television,Philips,Light L180,1200,1,40,1024*768,false
+Misc,Alfemo,Chair C20,60,2,Furniture
+Misc,Kinetix,SuperBall,30,2,Toy
+Misc,Stabil,Big Star Poster,50,2,Decoration
+Misc,Voicer,P11 Guitar,700,2,Instrument
+Misc,Turkish Carpets,Antique Carpet,1600,2,Carpet

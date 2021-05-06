@@ -1,0 +1,54 @@
+* {
+    -fx-primary:   #901e1e;
+}
+
+.menu_click {
+    -fx-border-color: -fx-primary;
+    -fx-border-width: 0px 0px 0px 4px;
+    -fx-background-color: #eeeeee;
+}
+
+.hover_border:hover {
+    -fx-border-color: -fx-primary;
+    -fx-border-width: 0px 0px 0px 4px;
+    -fx-background-color: #eeeeee;
+    -fx-cursor: hand;
+}
+
+.hover_border_profile:hover {
+    -fx-border-color: -fx-primary;
+    -fx-border-width: 0px 4px 0px 4px;
+    -fx-background-color: #eeeeee;
+    -fx-cursor: hand;
+}
+
+.cursor-hand {
+    -fx-cursor: hand;
+}
+
+.H1 {
+    -fx-font-family: Quicksand;
+    -fx-font-weight: bolder;
+    -fx-font-size: 1.5em;
+    -fx-fill: -fx-primary;
+}
+
+.text {
+    -fx-font-family: Quicksand;
+    -fx-font-weight: bolder;
+    -fx-font-size: 1.3em;
+    -fx-fill: -fx-primary;
+}
+
+.icon {
+    -fx-background-color: WHITE;
+    -fx-background-radius: 0px;
+}
+
+.dash_infos {
+    -fx-border-color: -fx-primary;
+    -fx-border-width: 1px 1px 1px 1px;
+    -fx-background-color: WHITE;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}

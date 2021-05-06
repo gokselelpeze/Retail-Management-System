@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="640.0" prefWidth="1080.0"
+            style="-fx-background-color: #323232;" stylesheets="@../../style/style.css"
+            xmlns="http://javafx.com/javafx/8.0.171" fx:controller="sample.gui.controllers.CompanyScreenController">
+    <children>
+        <AnchorPane fx:id="pnlTabPane" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0"
+                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <TabPane prefHeight="640.0" prefWidth="1080.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="EMPLOYEES">
+                            <content>
+                                <AnchorPane>
+                                    <children>
+                                        <TextField fx:id="txtSearchEmployee" layoutX="50.0" layoutY="50.0"
+                                                   prefHeight="30.0" prefWidth="300.0" promptText="ID or Name"
+                                                   AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0"/>
+                                        <HBox alignment="CENTER" layoutX="430.0" layoutY="530.0" spacing="100.0"
+                                              AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="400.0"
+                                              AnchorPane.rightAnchor="50.0">
+                                            <children>
+                                                <Button fx:id="btnAddEmployee" onAction="#addEmployee" prefWidth="100.0"
+                                                        text="ADD"/>
+                                                <Button fx:id="btnEditEmployee" mnemonicParsing="false"
+                                                        onAction="#editEmployee" prefWidth="100.0" text="EDIT"/>
+                                                <Button fx:id="btnRemoveEmployee" onAction="#removeEmployee"
+                                                        prefWidth="100.0" text="REMOVE"/>
+                                            </children>
+                                            <padding>
+                                                <Insets left="50.0" right="50.0"/>
+                                            </padding>
+                                        </HBox>
+                                        <ListView fx:id="listViewEmployees" layoutX="50.0" layoutY="106.0"
+                                                  prefHeight="200.0" prefWidth="300.0" AnchorPane.bottomAnchor="100.0"
+                                                  AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="100.0"/>
+                                        <AnchorPane fx:id="pnlEmployee" layoutX="500.0" layoutY="100.0"
+                                                    AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="450.0"
+                                                    AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
+                                            <children>
+                                                <HBox prefHeight="555.0" prefWidth="530.0" spacing="20.0"
+                                                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <VBox spacing="12.0">
+                                                            <children>
+                                                                <Label text="Name:"/>
+                                                                <Label text="Position:"/>
+                                                                <Label text="Shop ID:"/>
+                                                                <Label text="City:"/>
+                                                                <Label text="Town:"/>
+                                                                <Label text="Street:"/>
+                                                                <Label text="Phone number:"/>
+                                                                <Label text="Username:"/>
+                                                                <Label text="Password:"/>
+                                                                <Label text="Base Wage:"/>
+                                                                <Label text="Weekly Wage Bonus:"/>
+                                                                <Label text="Weekly Work Hours:"/>
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox spacing="10.0">
+                                                            <children>
+                                                                <TextField fx:id="txtEmployeeName" prefWidth="350.0"/>
+                                                                <TextField fx:id="txtEmployeePosition"
+                                                                           prefWidth="350.0"/>
+                                                                <TextField fx:id="txtEmployeeShopID" prefWidth="350.0"/>
+                                                                <TextField fx:id="txtEmployeeCity" prefWidth="350.0"/>
+                                                                <TextField fx:id="txtEmployeeTown" prefWidth="350.0"/>
+                                                                <TextField fx:id="txtEmployeeStreet" prefWidth="350.0"/>
+                                                                <TextField fx:id="txtEmployeePhone" prefWidth="350.0"/>
+                                                                <TextField fx:id="txtEmployeeUsername"
+                                                                           prefWidth="350.0"/>
+                                                                <TextField fx:id="txtEmployeePassword"
+                                                                           prefWidth="350.0"/>
+                                                                <TextField fx:id="txtEmployeeWage" prefWidth="350.0"/>
+                                                                <TextField fx:id="txtEmployeeBonus" prefWidth="350.0"/>
+                                                                <TextField fx:id="txtEmployeeHour" prefWidth="350.0"/>
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </AnchorPane>
+                                        <Button fx:id="btnSaveEmployee" layoutX="641.0" layoutY="585.0"
+                                                mnemonicParsing="false" onAction="#saveEmployee" prefWidth="300.0"
+                                                text="SAVE" visible="false" AnchorPane.bottomAnchor="40.0"
+                                                AnchorPane.leftAnchor="570.0"/>
+                                        <JFXButton fx:id="btnBackToEmployee" contentDisplay="GRAPHIC_ONLY"
+                                                   onAction="#backToEmployee" visible="false"
+                                                   AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
+                                            <graphic>
+                                                <FontAwesomeIconView fill="#c9bcbc" glyphName="CHEVRON_LEFT" size="40"/>
+                                            </graphic>
+                                        </JFXButton>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="SHOPS">
+                            <content>
+                                <AnchorPane>
+                                    <children>
+                                        <HBox layoutY="178.0" spacing="20.0" AnchorPane.leftAnchor="50.0"
+                                              AnchorPane.topAnchor="50.0"/>
+                                        <HBox alignment="CENTER" layoutX="430.0" layoutY="530.0" spacing="100.0"
+                                              AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="400.0"
+                                              AnchorPane.rightAnchor="50.0">
+                                            <children>
+                                                <Button fx:id="btnAddShop" onAction="#addShop" prefWidth="100.0"
+                                                        text="ADD"/>
+                                                <Button fx:id="btnEditShop" mnemonicParsing="false" onAction="#editShop"
+                                                        prefWidth="100.0" text="EDIT"/>
+                                                <Button fx:id="btnRemoveShop" onAction="#removeShop" prefWidth="100.0"
+                                                        text="REMOVE"/>
+                                            </children>
+                                            <padding>
+                                                <Insets left="50.0" right="50.0"/>
+                                            </padding>
+                                        </HBox>
+                                        <TextField fx:id="txtSearchShop" prefHeight="30.0" prefWidth="300.0"
+                                                   promptText="ID or Name" AnchorPane.leftAnchor="50.0"
+                                                   AnchorPane.topAnchor="50.0"/>
+                                        <ListView fx:id="listViewShop" prefHeight="200.0" prefWidth="300.0"
+                                                  AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="50.0"
+                                                  AnchorPane.topAnchor="100.0"/>
+                                        <AnchorPane fx:id="pnlShop" AnchorPane.bottomAnchor="100.0"
+                                                    AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="100.0"
+                                                    AnchorPane.topAnchor="100.0">
+                                            <children>
+                                                <HBox prefHeight="555.0" prefWidth="530.0" spacing="20.0"
+                                                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <VBox spacing="12.0">
+                                                            <children>
+                                                                <Label text="Name:"/>
+                                                                <Label text="City:"/>
+                                                                <Label text="Town:"/>
+                                                                <Label text="Street:"/>
+                                                                <Label text="Phone number:"/>
+                                                                <Label text="Email"/>
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox spacing="10.0">
+                                                            <children>
+                                                                <TextField fx:id="txtShopName" prefWidth="350.0"/>
+                                                                <TextField fx:id="txtShopCity" prefWidth="350.0"/>
+                                                                <TextField fx:id="txtShopTown" prefWidth="350.0"/>
+                                                                <TextField fx:id="txtShopStreet" prefWidth="350.0"/>
+                                                                <TextField fx:id="txtShopPhone" prefWidth="350.0"/>
+                                                                <TextField fx:id="txtShopEmail" prefWidth="350.0"/>
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </AnchorPane>
+                                        <Button fx:id="btnSaveShop" layoutX="651.0" layoutY="595.0"
+                                                mnemonicParsing="false" onAction="#saveShop" prefWidth="300.0"
+                                                text="SAVE" visible="false" AnchorPane.bottomAnchor="40.0"
+                                                AnchorPane.leftAnchor="570.0"/>
+                                        <JFXButton fx:id="btnBackToShop" contentDisplay="GRAPHIC_ONLY"
+                                                   onAction="#backToShop" visible="false" AnchorPane.leftAnchor="50.0"
+                                                   AnchorPane.topAnchor="50.0">
+                                            <graphic>
+                                                <FontAwesomeIconView fill="#c9bcbc" glyphName="CHEVRON_LEFT" size="40"/>
+                                            </graphic>
+                                        </JFXButton>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
