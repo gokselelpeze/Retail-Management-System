@@ -1,0 +1,4 @@
+Oktay Türkdağlı,İzmir,Buca,Atatürk Mah,5415174400,40,cashier,2300,1,oktay,1234,100
+Gökhan Göksel Elpeze,İzmir,Buca,Şirinkapı Mah,5415174401,60,manager,2200,1,goksel,1234,105
+Murat Taylan Şahin,İzmir,Konak,Alsancak,5415174402,50,cashier,2250,0,murat,1234,110
+Berhan Türkü Ay,İzmir,Bornova,Kazımdirik,5415174403,55,manager,2200,2,berhan,1234,100

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171"
+            fx:controller="sample.gui.controllers.HomeScreenController">
+    <children>
+        <StackPane fx:id="stackPane" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0"
+                   AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+        <AnchorPane fx:id="rootAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../../style/style.css"
+                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                    AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                            AnchorPane.topAnchor="80.0">
+                    <children>
+                        <VBox prefHeight="640.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
+                              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <JFXButton fx:id="btnSale" alignment="BASELINE_LEFT" graphicTextGap="20.0"
+                                           onAction="#handleButtonAction" prefHeight="50.0" prefWidth="200.0"
+                                           style="-fx-background-color: transparent;" styleClass="hover_border"
+                                           text="SALES" VBox.vgrow="ALWAYS">
+                                    <graphic>
+                                        <FontAwesomeIconView fill="#901e1e" glyphName="CIRCLE_ALT_NOTCH" size="20px"/>
+                                    </graphic>
+                                    <VBox.margin>
+                                        <Insets top="30.0"/>
+                                    </VBox.margin>
+                                </JFXButton>
+                                <JFXButton fx:id="btnProduct" alignment="BASELINE_LEFT" graphicTextGap="20.0"
+                                           onAction="#handleButtonAction" prefHeight="50.0" prefWidth="200.0"
+                                           style="-fx-background-color: transparent;" styleClass="hover_border"
+                                           text="PRODUCT" VBox.vgrow="ALWAYS">
+                                    <graphic>
+                                        <FontAwesomeIconView fill="#901e1e" glyphName="INDENT" size="20px"/>
+                                    </graphic>
+                                </JFXButton>
+                                <JFXButton fx:id="btnCompany" alignment="BASELINE_LEFT" graphicTextGap="20.0"
+                                           onAction="#handleButtonAction" prefHeight="50.0" prefWidth="200.0"
+                                           style="-fx-background-color: transparent;" styleClass="hover_border"
+                                           text="COMPANY" VBox.vgrow="ALWAYS">
+                                    <graphic>
+                                        <FontAwesomeIconView fill="#901e1e" glyphName="LIST_UL" size="20px"/>
+                                    </graphic>
+                                </JFXButton>
+                                <JFXButton fx:id="btnReports" alignment="BASELINE_LEFT" graphicTextGap="20.0"
+                                           onAction="#handleButtonAction" prefHeight="50.0" prefWidth="200.0"
+                                           style="-fx-background-color: transparent;" styleClass="hover_border"
+                                           text="REPORTS" VBox.vgrow="ALWAYS">
+                                    <graphic>
+                                        <FontAwesomeIconView fill="#901e1e" glyphName="FILE" size="20px"/>
+                                    </graphic>
+                                </JFXButton>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+                <AnchorPane prefHeight="80.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                            AnchorPane.topAnchor="0.0">
+                    <children>
+                        <JFXButton fx:id="btnCloseImg" onAction="#handleButtonAction" text=""
+                                   AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0">
+                            <graphic>
+                                <FontAwesomeIconView fill="#901e1e" glyphName="WINDOW_CLOSE" size="30"/>
+                            </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnMinimizeImg" onAction="#handleButtonAction" text=""
+                                   AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="15.0">
+                            <graphic>
+                                <FontAwesomeIconView fill="#901e1e" glyphName="WINDOW_MINIMIZE" size="30"/>
+                            </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnRestoreImg" onAction="#handleButtonAction" text=""
+                                   AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="15.0">
+                            <graphic>
+                                <FontAwesomeIconView fill="#901e1e" glyphName="WINDOW_RESTORE" size="30"/>
+                            </graphic>
+                        </JFXButton>
+                        <HBox alignment="CENTER_LEFT" prefHeight="80.0" AnchorPane.leftAnchor="200.0"
+                              AnchorPane.rightAnchor="200.0">
+                            <children>
+                                <HBox alignment="CENTER">
+                                    <children>
+                                        <TextField focusTraversable="false" promptText="Search Company.."
+                                                   style="-fx-background-color: transparent; -fx-prompt-text-fill: #485460; -fx-border-color: #9a9a9a; -fx-border-radius: 10px;">
+                                            <HBox.margin>
+                                                <Insets left="10.0" right="10.0"/>
+                                            </HBox.margin>
+                                        </TextField>
+                                        <Button contentDisplay="GRAPHIC_ONLY"
+                                                style="-fx-background-color: transparent;">
+                                            <graphic>
+                                                <FontAwesomeIconView fill="#901e1e" glyphName="SEARCH" size="20px"
+                                                                     styleClass="cursor-hand"/>
+                                            </graphic>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <MenuButton fx:id="menuBtnUser" contentDisplay="CENTER" mnemonicParsing="false"
+                                                    style="-fx-background-color: transparent;">
+                                            <items>
+                                                <MenuItem mnemonicParsing="false" text="PROFILE"/>
+                                                <MenuItem mnemonicParsing="false" text="SETTINGS"/>
+                                                <MenuItem mnemonicParsing="false" text="LOGOUT"/>
+                                            </items>
+                                        </MenuButton>
+                                        <Button contentDisplay="GRAPHIC_ONLY"
+                                                style="-fx-background-color: transparent;">
+                                            <HBox.margin>
+                                                <Insets/>
+                                            </HBox.margin>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                                <JFXButton fx:id="btnNotification" contentDisplay="GRAPHIC_ONLY"
+                                           onAction="#handleButtonAction" prefHeight="38.0" prefWidth="22.0"
+                                           text="Notification">
+                                    <graphic>
+                                        <AnchorPane prefHeight="22.0" prefWidth="9.0">
+                                            <children>
+                                                <FontAwesomeIconView fill="#cdcdcd" glyphName="BELL" size="27"
+                                                                     AnchorPane.rightAnchor="4.0"
+                                                                     AnchorPane.topAnchor="2.0"/>
+                                                <AnchorPane prefHeight="15.0" prefWidth="15.0"
+                                                            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <Circle fx:id="circleNotification" fill="#e33d22" radius="9.0"
+                                                                stroke="BLACK" strokeType="INSIDE"
+                                                                AnchorPane.bottomAnchor="0.0"
+                                                                AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                                                AnchorPane.topAnchor="0.0"/>
+                                                        <Label fx:id="labelNotificationCount" alignment="CENTER"
+                                                               prefHeight="50.4" prefWidth="50.4" text="1"
+                                                               textFill="WHITE" AnchorPane.bottomAnchor="0.0"
+                                                               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                                               AnchorPane.topAnchor="0.0">
+                                                            <font>
+                                                                <Font size="10.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </graphic>
+                                </JFXButton>
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                            prefHeight="640.0" prefWidth="1080.0" style="-fx-background-color: #fcba03;"
+                            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0"
+                            AnchorPane.topAnchor="80.0">
+                    <children>
+                        <fx:include fx:id="pnlCompanyScreen" prefHeight="700.0" prefWidth="850.0"
+                                    source="companyScreen.fxml" AnchorPane.bottomAnchor="0.0"
+                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                    AnchorPane.topAnchor="0.0"/>
+                        <fx:include fx:id="pnlReportsScreen" prefHeight="700.0" prefWidth="850.0"
+                                    source="reportsScreen.fxml" AnchorPane.bottomAnchor="0.0"
+                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                    AnchorPane.topAnchor="0.0"/>
+                        <fx:include fx:id="pnlProductScreen" prefHeight="700.0" prefWidth="850.0"
+                                    source="productScreen.fxml" AnchorPane.bottomAnchor="0.0"
+                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                    AnchorPane.topAnchor="0.0"/>
+                        <fx:include fx:id="pnlSaleScreen" prefHeight="700.0" prefWidth="850.0" source="saleScreen.fxml"
+                                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

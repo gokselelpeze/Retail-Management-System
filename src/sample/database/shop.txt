@@ -1,0 +1,3 @@
+Buca,2321000001,buca@cyg.com,İzmir,Buca,Tınaztepe
+Bornova,2321000002,bornova@cyg.com,İzmir,Bornova,Kazımdirik
+Konak,2321000003,konak@cyg.com,İzmir,Konak,Alsancak
